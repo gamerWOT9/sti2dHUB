@@ -1,0 +1,122 @@
+<html>
+    <div>
+        <input type="checkbox" id="videoCheckbox">
+        <label for="videoCheckbox">Show video</label>
+      </div>
+      <div>
+        <label for="videoInput">Video URL:</label>
+        <input type="text" id="videoInput" name="videoInput">
+      </div>
+    </div>
+
+    <div>
+        <input type="checkbox" id="pCheckbox">
+        <label for="pCheckbox">Show paragraphe</label>
+      </div>
+      <div>
+        <label for="pInput">Paragraph:</label>
+        <input type="text" id="pInput" name="pInput">
+      </div>
+    </div>
+</html>
+
+<script>
+    // Listen for form submit event
+    document.querySelector('#addArticleForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get form input values
+        const video = document.querySelector('#videoInput').value;
+        const paragraph = document.querySelector('#pInput').value;
+
+        // Construct the article HTML
+        const article1 = `
+        <div class="forpre">
+            <textarea class="copy-block">
+            &lt;article class="tabcontent"&gt;
+                &lt;p&gt;${video}&lt;/p&gt;
+                &lt;p&gt;${paragraph}&lt;/p&gt;
+            &lt;/article&gt;
+            </textarea>
+        </div>
+        `;
+        // Add the article HTML to the "myMenu" div
+        document.querySelector('.myMenu').innerHTML += article1;
+        // Reset the form
+        document.querySelector('#addArticleForm').reset();
+    });
+</script>
+
+
+
+<script>
+    // Listen for form submit event
+    document.querySelector('#addArticleForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get form input values
+        const video = document.querySelector('#videoInput').value;
+        const paragraph = document.querySelector('#pInput').value;
+
+        let videoHTML = '';
+        let paragraphHTML = '';
+
+        // Check if the video checkbox is checked
+        if (document.querySelector('#videoCheckbox').checked) {
+            videoHTML = `<p>${video}</p>`;
+        }
+
+        // Check if the paragraph checkbox is checked
+        if (document.querySelector('#pCheckbox').checked) {
+            paragraphHTML = `<p>${paragraph}</p>`;
+        }
+
+        // Construct the article HTML
+        const article1 = `
+        <div class="forpre">
+            <textarea class="copy-block">
+            &lt;article class="tabcontent"&gt;
+                ${videoHTML}
+                ${paragraphHTML}
+            &lt;/article&gt;
+            </textarea>
+        </div>
+    `;
+    // Add the article HTML to the "myMenu" div
+    document.querySelector('.myMenu').innerHTML += article1;
+    // Reset the form
+    document.querySelector('#addArticleForm').reset();
+});
+</script>
+
+<script>
+
+const yoo= `
+<div class="forpre">
+    <textarea class="copy-block">
+
+      &lt;article class="tabcontent"&gt;
+
+        &lt;h2&gt;${title}&lt;/h2&gt;
+
+        &lt;div class="video-container"&gt;
+          &lt;iframe class="responsive-iframe" src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+
+        &lt;p&gt;${paragraph}&lt;/p&gt;
+
+        &lt;div class="articlefood"&gt;
+          &lt;h5&gt;Réalisé le ${date}&lt;/h5&gt;
+
+          &lt;div class="tagdiv"&gt;
+            &lt;div class="tagele"&gt;&lt;h4&gt;${tag}&lt;/h4&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/article&gt;
+
+      </textarea>
+      <button id="copyBtn">Copy Text</button>
+    </div>`
+
+</script>

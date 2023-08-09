@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="icon" href="the-base\images\icons\icons-pages\icon-HUB_Admin-32x32px.png">
+  <title>Admin Page</title>
+
+  <link rel="stylesheet" href="the-Admin-Page\AP-style1.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<html>
+  <div class="background-image" style="background-image: url(the-base/images/background-images.jpg);"></div>
+  <div class="background-color"></div>
+
+  <div>
+    <div style="display: flex;"><div class="titledisplay1"><h1>Add Article</h1><div class="div-icons" style="background-image: url(the-body/images/devicon.png);"></div></div></div>
+    <form id="addArticleForm">
+      <div>
+        <label for="titleInput">Title:</label>
+        <input type="text" id="titleInput" name="titleInput" placeholder="Title...">
+      </div>
+      <div title="Video" class="BIGBOX">
+        <div style="display: flex;">
+          <label for="videoCheckbox">Show video: </label>
+          <input type="checkbox" id="videoCheckbox" checked>
+        </div>
+        <div class="span22">
+          <label for="videoInput">Video URL:</label>
+          <input type="url" id="videoInput" name="videoInput" placeholder="Link of the video here..." style="background: white;">
+          <!-- https://codepen.io/chriscoyier/pen/GRKZryx -->
+          <label for="videoInput">Video image URL:</label>
+          <input type="url" id="videoimageInput" name="videoimageInput" placeholder="Link of the image here..." style="background: white;">
+        </div>
+      </div>
+      <div title="Images" class="BIGBOX">
+        <div style="display: flex;">
+          <label for="imagesCheckbox">Show image.s: </label>
+          <input type="checkbox" id="imagesCheckbox" checked>
+        </div>
+        <div class="span22">
+          <label for="imageInput">Image URL:</label>
+          <div id="image-form">
+            <div class="content-imageInput">
+              <input type="text" id="imageInput" name="imageInput" placeholder="Link of the image here..." style="background: white;">
+              <select class="select-option" name="image-extensions" id="imageExtensionsSelect">
+                <option value="">--option--</option>
+                <option value=".png">.png</option>
+                <option value=".jpg">.jpg</option>
+                <option value=".jpeg">.jpeg</option>
+                <option value=".gif">.gif</option>
+              </select>
+              <button class="button-meplz" type="button" class="delete-button" onclick="deleteInputField(this.parentNode)">Delete</button>
+            </div>
+          </div>
+          <div id="add-button-div">
+              <button class="button-meplz" type="button" onclick="addInputField()">Add Image Link <p><span id="counterButtonImage">1</span> /10</p></button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="paragraphInput">Paragraph:</label>
+        <textarea type="text" id="paragraphInput" name="paragraphInput" placeholder="Write something here..."></textarea>
+      </div>
+      <div class="miniBOX">
+        <div>
+          <label for="dateInput">Made in:</label>
+          <input type="date" id="dateInput" name="dateInput"
+          value=""
+          min="2000-01-01" max="2100-12-31">
+        </div>
+        <div class="span23">
+          <label for="tagInput">Tag:</label>
+          <input type="text" id="tagInput" name="tagInput" placeholder="Add some tag...">
+        </div>
+      </div>
+      <button type="submit">Add Article</button>
+      <button type="reset">Reset the form</button>
+    </form>
+
+    <div class="myMenu">
+      <!-- Your existing articles go here -->
+    </div>
+  </div>
+</html>
+
+<script type="text/javascript" src="the-Admin-Page\AP-script1.js"></script>

@@ -1,0 +1,26 @@
+{
+  "short_name": "HUB",
+  "name": "Le HUB de projets",
+  "icons": [
+    {
+      "src": "the-base/images/icons/icons-pages/icon-HUB-32x32px.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "the-base/images/icons/icons-pages/icon-HUB-144x144px.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "the-base/images/icons/icons-pages/icon-HUB-534x534px.png",
+      "sizes": "534x534",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/HUB/",
+  "scope": "/HUB/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#3f51b5"
+}
