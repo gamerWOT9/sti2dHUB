@@ -1,4 +1,4 @@
-var GHPATH = '/HUB';
+var GHPATH = '/sti2dHUB';
 var APP_PREFIX = 'gppwa_';
 var VERSION = 'version_002';
 var URLS = [    

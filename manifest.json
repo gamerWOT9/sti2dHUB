@@ -1,6 +1,6 @@
 {
   "short_name": "HUB",
-  "name": "Le HUB de projets",
+  "name": "sti2dHUB",
   "icons": [
     {
       "src": "the-base/images/icons/icons-pages/icon-HUB-32x32px.png",
@@ -18,8 +18,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/HUB/",
-  "scope": "/HUB/",
+  "start_url": "/sti2dHUB/",
+  "scope": "/sti2dHUB/",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#3f51b5"
