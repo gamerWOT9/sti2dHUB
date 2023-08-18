@@ -469,6 +469,9 @@ function changeMaxArticlesCount() {
           count += 3;
           document.getElementById("defaultOpen").click();
           showArticles();
+          if (count >= articles.length) {
+            maxArticlesButton.innerHTML = "Max articles displayed";
+          }
         }
         // console.log(count);
         // console.log(articles.length);
