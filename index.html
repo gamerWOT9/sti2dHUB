@@ -160,13 +160,109 @@
 					</div>
 				</article> -->
 
-				<article class="tabcontent fullscreen" id="article-tuto1-flask_sqlite">
+				<article class="tabcontent fullscreen" id="article-tuto1-arduino_flask_sqlite">
 					<div class="contentTabOp">
-						<a href="#article-tuto1-flask_sqlite" title="Fullscreen" class="towards BTNfullscreen"></a>
+						<a href="#article-tuto1-arduino_flask_sqlite" title="Fullscreen" class="towards BTNfullscreen"></a>
 						<a title="Share the article" class="share-article"><img src="the-base/images/icons/share.svg" alt=""></a>
 						<a href="#" class="close">x</a>
 					</div>
-					<h2>TUTO Création website Flask + SQLite</h2>
+					<h2>Faire son propre Project TSTI</h2>
+					<div class="readable readmore">
+						<div class="readmore-content">
+							<p><strong>Introduction:</strong><br>
+								Dans ce tutoriel, je vais vous guider à travers les étapes détaillées pour créer un site web hébergé sur un Raspberry Pi en utilisant le framework Flask. 
+								Ce site web sera capable d'exécuter du code Python pour récupérer des données d'un port série Arduino et les insérer dans une base de données SQLite. 
+								Il pourrat aussi récupérer ces données depuis la database SQLite et les afficher à l'aide de JavaScript en temps réel. <br><br>
+								💡 En cas de difficulté durant ce tutoriel, je vous invite à utiliser nos manuels de référence a tous, Google / man / Internet… <br>
+								❓ Une question ? == ChatGPT 🙂 <br>
+
+								<br><br>
+								<strong>Étape 1: Créer Un Environnement Flask</strong><br>
+								Premièrement créer un environnement Flask en suivant ce tutoriel : <br>
+								<a class="external" href="https://phoenixnap.com/kb/install-flask" target="_blank">https://phoenixnap.com/kb/install-flask</a><br>
+
+								<br><br>
+								<strong>Étape 2: Créer App.py</strong><br>
+								Bon maintenant que cela est fait, on va supprimer le fichier hello.py et créer app.py, dans ce fichier on va : <br>
+									- commencer par quelques “import” <br>
+									- ensuite la base pour lancer le server Flask <br>
+									- et on finit par du code qui va nous permettre de récupérer les data d’un Arduino <br>
+								Le code est si joint, je vous invite à essayer de le comprendre étape par étapes, je fais exprès de ne pas tout détailler, à vous de faire les recherches 
+								nécessaires pour tout bien comprendre. <br>
+								</p>
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode1tuto1"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode1tuto1')">Copy code</button><br><br>
+
+								<p>
+								<strong>Étape 3: Créer Database.py</strong><br>
+								Pour faire plus jolie on va séparer notre code SQLite pour la database de notre code app.py, pour se faire on créer un potit fichier database.py <br>
+								Dedans tu vas mettre tout le code suivant, que tu peux modifier à ta guise selon tes besoins (si jamais tu as des difficultés, demande soit à Google soit 
+								à Mr.GPT qui lui est même capable de faire ton boulot a ta place). <br>
+								</p>
+
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode2tuto1"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode2tuto1')">Copy code</button><br><br>
+
+								<p>
+								Ce code permettra de placer les données dans un fichier “database.db”. Si par la suite cela t'intéresserait de pouvoir lire et modifier les données du 
+								fichier, je t’invite à t'informer sur les différents moyens de pouvoir le faire (pour ma part j’ai utilisé DB Browser for SQLite). <br><br>
+
+								<strong>Étape 4: Notre Index.html</strong><br>
+								Avant-dernière étape, créez un dossier templates, et mettez ce simple index.html dedans <br>
+								</p>
+
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode3tuto1"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode3tuto1')">Copy code</button> <br><br>
+
+								<p>
+								<strong>Étape 5: Script.js</strong><br>
+								Et pour finir, un dossier static, avec le script js qui va avec, il va permettre d'envoyer les requêtes vers app.py et d'afficher les data de 
+								notre database. <br>
+								</p>
+
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode4tuto1"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode4tuto1')">Copy code</button> <br><br>
+
+								<p>
+								<strong>Étape 6: Script Arduino</strong><br>
+								Pour finir il faut bien tester le code que tu viens de faire non ? Voici un script Arduino qui te permettra de le tester. <br>
+								</p>
+
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode5tuto1"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode5tuto1')">Copy code</button> <br><br>
+
+								<p>
+								<strong>Étape 7: Encore Un Soucis ?</strong><br>
+								Si jamais tu galères trop voici le git du projet que j’ai fait de mon côté pour ce tuto il fonctionne à 100%… <br>
+
+								Si jamais... cela ne fonctionne toujours pas, c’est forcément un problème de ton côté (surement un problème avec les dépendances), il faut que 
+								tu scrutes le terminal ou bien la console de ton navigateur pour comprendre ce qu’il ne va pas. <br><br>
+								</p>
+
+								<p>
+									<strong>Conclusion:</strong><br>
+									Félicitations ! Vous avez maintenant créé un site web hébergé sur un Raspberry Pi à l'aide de Flask, capable de récupérer des données depuis une base de données SQLite et de les afficher à l'aide de JavaScript. De plus, vous avez appris comment interagir avec un Arduino via le port série et insérer les données dans la base de données SQLite. Vous pouvez maintenant personnaliser votre site web et ajouter plus de fonctionnalités en fonction de vos besoins. 
+									<br>
+								</p>
+
+								<div class="articlefood">
+								<h5>Made in 2023-08</h5>
+								<div class="tagdiv">
+									<div class="tagele"><h4>Projects</h4></div>
+								</div>    
+							</div>    
+						</div>
+						<button href="javascript:void(null);" onclick=FReadmore() class="button button-secondary plus" title="read more..."></button>
+					</div>
+				</article>
+
+				<article class="tabcontent fullscreen" id="article-tuto2-flask_sqlite">
+					<div class="contentTabOp">
+						<a href="#article-tuto2-flask_sqlite" title="Fullscreen" class="towards BTNfullscreen"></a>
+						<a title="Share the article" class="share-article"><img src="the-base/images/icons/share.svg" alt=""></a>
+						<a href="#" class="close">x</a>
+					</div>
+					<h2>⚠️ Warning: Tuto généré avec chatGPT, il est loin d'être terminé donc ne surtout PAS LE FAIRE ⚠️</h2>
 					<div class="readable readmore">
 						<div class="readmore-content">
 							<p><strong>Introduction:</strong><br>
@@ -217,8 +313,8 @@
 								<p>
 								3. Ouvrez le fichier `app.py` dans un éditeur de texte et collez le code suivant:<br>
 								</p>
-								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode1tuto1"></code></pre></div>
-								<button onclick="copyCodeToClipboard('myCode1tuto1')">Copy code</button><br><br>
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode1tuto2"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode1tuto2')">Copy code</button><br><br>
 
 								<p>
 								<strong>Étape 4: Création du modèle HTML et du script JavaScript</strong><br>
@@ -229,8 +325,8 @@
 								   2. Créez un fichier nommé `index.html` dans le répertoire `templates` et ouvrez-le dans un éditeur de texte. <br>
 								   3. Ajoutez le code HTML suivant au fichier `index.html`: <br>
 								</p>
-								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode2tuto1"></code></pre></div>
-								<button onclick="copyCodeToClipboard('myCode2tuto1')">Copy code</button> <br><br>
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode2tuto2"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode2tuto2')">Copy code</button> <br><br>
 
 								<p>
 									<strong>Étape 5: Interaction avec Arduino via le port série</strong> <br>
@@ -241,13 +337,13 @@
 									<p>
 									3. Ajoutez la fonction suivante après la classe `Data` dans le fichier `app.py`: <br>
 								</p>
-								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode3tuto1"></code></pre></div>
-								<button onclick="copyCodeToClipboard('myCode3tuto1')">Copy code</button> <br><br>
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode3tuto2"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode3tuto2')">Copy code</button> <br><br>
 								<p>
 									4. Modifiez la fonction `index()` dans le fichier `app.py` pour inclure la récupération des données depuis l'Arduino:
 								</p>
-								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode4tuto1"></code></pre></div>
-								<button onclick="copyCodeToClipboard('myCode4tuto1')">Copy code</button> <br><br>
+								<div class="pre0div"><pre><code class="language-javascript" data-var-name="myCode4tuto2"></code></pre></div>
+								<button onclick="copyCodeToClipboard('myCode4tuto2')">Copy code</button> <br><br>
 								<p>
 									<strong>Conclusion:</strong><br>
 									Félicitations ! Vous avez maintenant créé un site web hébergé sur un Raspberry Pi à l'aide de Flask, capable de récupérer des données depuis une base de données SQLite et de les afficher à l'aide de JavaScript. De plus, vous avez appris comment interagir avec un Arduino via le port série et insérer les données dans la base de données SQLite. Vous pouvez maintenant personnaliser votre site web et ajouter plus de fonctionnalités en fonction de vos besoins. 

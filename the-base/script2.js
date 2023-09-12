@@ -571,7 +571,7 @@ function jsshare() {
   // Get the text field
       // var copyText = document.getElementById("myInput");
   const tabContent = document.querySelector('.tabcontent');
-  var TextToShare = "https://gamerwot9.github.io/HUB/" + tabContent.id;
+  var TextToShare = "https://gamerwot9.github.io/sti2dHUB/" + tabContent.id;
 
   // Select the text field
   copyText.select();
@@ -594,7 +594,7 @@ function jsshare() {
   shareBtns.forEach(shareBtn => {
     shareBtn.addEventListener('click', () => {
       // Get the ID of the parent tabcontent element
-      const tabContentId = shareBtn.parentElement.id;
+      const tabContentId = shareBtn.parentElement.parentElement.id;
       const tabContent = document.getElementById(tabContentId);
 
       // Check if a tabcontent element with the specified ID exists

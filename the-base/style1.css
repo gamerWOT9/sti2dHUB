@@ -341,6 +341,9 @@ top: 0;
       margin-bottom: 2.5rem;
     }
 
+    article p strong {
+      font-size: 22px;
+    }
 
 /* FULLSCREEN */
     .tabcontent.fullscreen:target ~ body {
@@ -348,6 +351,7 @@ top: 0;
       overflow-y: hidden;
     }
     .tabcontent.fullscreen:target {
+      display: block !important;
       position: fixed;
       visibility: visible;
       width: 100%;
